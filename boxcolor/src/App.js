@@ -14,18 +14,12 @@ class App extends React.Component {
   onChange(){
     this.setState(
       {
-        color:'yellow'
+        color:'yellow', 
+        counterClick: this.state.counterClick+1
       }
     )
+    console.log("click counter: ", this.state.counterClick)
   }
-//onClick={() => this.play()}
-// onChange = (e) => {
-//   this.setState({
-//      color:'orange',
-//      //clickCounter: this.setState.clickCounter++
-//   })
-//   console.log("click counter==>", this.state.clickCounter)
-// } 
   render()
   {
     return (
