@@ -1,51 +1,50 @@
 import React from 'react';
 import './App.css';
 
+
 class App extends React.Component {
   constructor(props){
     super(props);
     this.state={
-      color:'green'
+      color:'green',
+      counterClick:0
     }
+    //this.onChange=this.onChange.bind(this);
   }
-  changeColor(){
+  onChange(){
     this.setState(
       {
         color:'yellow'
       }
     )
   }
+//onClick={() => this.play()}
+// onChange = (e) => {
+//   this.setState({
+//      color:'orange',
+//      //clickCounter: this.setState.clickCounter++
+//   })
+//   console.log("click counter==>", this.state.clickCounter)
+// } 
   render()
   {
     return (
     <div> 
       <div className="App" 
         style=
-        {{backgroundColor: this.state.color}} onClick={this.changeColor}
+        {{backgroundColor: this.state.color}} onClick={()=>this.onChange()}
         >
-      
-      <p>Count= </p>
+      <p>Count= {this.state.counterClick}</p>
       </div>  
-     
       {/* <h3>Count= </h3> */}
     </div>
-   
   );
 }
 }
 
 export default App;
 
-//export default class App extends Component{//
-// class App extends Component{
-//   constructor(props){
-//     super(props);
-//     this.state={
-//       color: "green",
-//       //clickCounter:0
-//     }
-//     this.onChange=this.onChange.bind(this);
-//   }  
+
 
 // onChange = (e) => {
 //   this.setState({
