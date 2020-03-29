@@ -1,12 +1,19 @@
 import React from 'react';
 import './App.css';
 
-class App extends React.Component() {
-  constructor(){
-    super()
+class App extends React.Component {
+  constructor(props){
+    super(props);
     this.state={
       color:'green'
     }
+  }
+  changeColor(){
+    this.setState(
+      {
+        color:'yellow'
+      }
+    )
   }
   render()
   {
@@ -14,7 +21,8 @@ class App extends React.Component() {
     <div> 
       <div className="App" 
         style=
-        {{backgroundColor: this.state.color}}>
+        {{backgroundColor: this.state.color}} onClick={this.changeColor}
+        >
       
       <p>Count= </p>
       </div>  
