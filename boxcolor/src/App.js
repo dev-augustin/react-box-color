@@ -12,13 +12,14 @@ class App extends React.Component {
   }
 
 colorChange(){
-  this.setState((state) => {
   //  Reference:
   // https://reactjs.org/docs/faq-state.html Important: read `state` instead of `this.state` when updating.
+  this.setState((state) => {
   return( {
     color:(state.color==='yellow')?'green':'yellow',
     counterClick: state.counterClick++});
     }); 
+ 
 
 
   //   if (this.state.color==='green'){
